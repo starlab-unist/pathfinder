@@ -1,0 +1,6 @@
+#ifndef PATHFINDER_DUET
+#define PATHFINDER_DUET
+
+#define DUET_BIN_PATH "@DUET_BIN_PATH@"
+
+#endif
