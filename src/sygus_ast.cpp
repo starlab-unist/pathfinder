@@ -413,7 +413,7 @@ BoolExpr::BoolExpr(BoolExprType t_, std::unique_ptr<BoolExpr> bleft_,
     if (bleft_->struct_eq(true_expr())) {
       copy(*bright_);
     } else if (bright_->struct_eq(true_expr())) {
-      copy(*bleft);
+      copy(*bleft_);
     } else {
       t = t_;
       bleft = std::move(bleft_);
@@ -423,7 +423,7 @@ BoolExpr::BoolExpr(BoolExprType t_, std::unique_ptr<BoolExpr> bleft_,
     if (bleft_->struct_eq(false_expr())) {
       copy(*bright_);
     } else if (bright_->struct_eq(false_expr())) {
-      copy(*bleft);
+      copy(*bleft_);
     } else {
       t = t_;
       bleft = std::move(bleft_);
